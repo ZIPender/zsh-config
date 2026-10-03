@@ -1,0 +1,7 @@
+--theme="Catppuccin Macchiato"
+
+--style="numbers,changes,header"
+
+--tabs=4
+
+--map-syntax="*.luau:Lua"

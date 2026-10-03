@@ -1,0 +1,349 @@
+colourful: true
+
+filekinds:
+  normal:
+    foreground: "#E7E2EA"
+
+  directory:
+    foreground: "#8FAAFF"
+    is_bold: true
+
+  symlink:
+    foreground: "#70CFE3"
+
+  pipe:
+    foreground: "#69636F"
+
+  block_device:
+    foreground: "#FF8A9E"
+
+  char_device:
+    foreground: "#FF8A9E"
+
+  socket:
+    foreground: "#5D4770"
+
+  special:
+    foreground: "#D89AFF"
+
+  executable:
+    foreground: "#75D6A5"
+
+  mount_point:
+    foreground: "#70CFE3"
+
+perms:
+  user_read:
+    foreground: "#D9D4DE"
+
+  user_write:
+    foreground: "#E6C875"
+
+  user_execute_file:
+    foreground: "#75D6A5"
+
+  user_execute_other:
+    foreground: "#75D6A5"
+
+  group_read:
+    foreground: "#B9B2C0"
+
+  group_write:
+    foreground: "#C6A95F"
+
+  group_execute:
+    foreground: "#75D6A5"
+
+  other_read:
+    foreground: "#918799"
+
+  other_write:
+    foreground: "#9B824A"
+
+  other_execute:
+    foreground: "#5FAE88"
+
+  special_user_file:
+    foreground: "#D89AFF"
+
+  special_other:
+    foreground: "#69636F"
+
+  attribute:
+    foreground: "#918799"
+
+size:
+  major:
+    foreground: "#918799"
+
+  minor:
+    foreground: "#70CFE3"
+
+  number_byte:
+    foreground: "#D9D4DE"
+
+  number_kilo:
+    foreground: "#B9B2C0"
+
+  number_mega:
+    foreground: "#8FAAFF"
+
+  number_giga:
+    foreground: "#A970FF"
+
+  number_huge:
+    foreground: "#D89AFF"
+
+  unit_byte:
+    foreground: "#69636F"
+
+  unit_kilo:
+    foreground: "#7297FF"
+
+  unit_mega:
+    foreground: "#A970FF"
+
+  unit_giga:
+    foreground: "#BD63FF"
+
+  unit_huge:
+    foreground: "#70CFE3"
+
+users:
+  user_you:
+    foreground: "#D6B5F5"
+    is_bold: true
+
+  user_root:
+    foreground: "#FF6B81"
+
+  user_other:
+    foreground: "#A970FF"
+
+  group_yours:
+    foreground: "#918799"
+
+  group_other:
+    foreground: "#69636F"
+
+  group_root:
+    foreground: "#FF6B81"
+
+links:
+  normal:
+    foreground: "#70CFE3"
+
+  multi_link_file:
+    foreground: "#8FAAFF"
+
+git:
+  new:
+    foreground: "#75D6A5"
+
+  modified:
+    foreground: "#E6C875"
+
+  deleted:
+    foreground: "#FF6B81"
+
+  renamed:
+    foreground: "#70CFE3"
+
+  typechange:
+    foreground: "#D89AFF"
+
+  ignored:
+    foreground: "#69636F"
+
+  conflicted:
+    foreground: "#FF8A9E"
+
+git_repo:
+  branch_main:
+    foreground: "#D6B5F5"
+
+  branch_other:
+    foreground: "#BD63FF"
+
+  git_clean:
+    foreground: "#75D6A5"
+
+  git_dirty:
+    foreground: "#FF6B81"
+
+security_context:
+  colon:
+    foreground: "#69636F"
+
+  user:
+    foreground: "#B9B2C0"
+
+  role:
+    foreground: "#A970FF"
+
+  typ:
+    foreground: "#5D4770"
+
+  range:
+    foreground: "#BD63FF"
+
+file_type:
+  image:
+    foreground: "#E6C875"
+
+  video:
+    foreground: "#FF8A9E"
+
+  music:
+    foreground: "#D89AFF"
+
+  lossless:
+    foreground: "#70CFE3"
+
+  crypto:
+    foreground: "#75D6A5"
+
+  document:
+    foreground: "#D9D4DE"
+
+  compressed:
+    foreground: "#FF6B81"
+
+  temp:
+    foreground: "#69636F"
+
+  compiled:
+    foreground: "#8FAAFF"
+
+  build:
+    foreground: "#C6A95F"
+
+  source:
+    foreground: "#A970FF"
+
+punctuation:
+  foreground: "#5D4770"
+
+date:
+  foreground: "#918799"
+
+inode:
+  foreground: "#69636F"
+
+blocks:
+  foreground: "#69636F"
+
+header:
+  foreground: "#D6B5F5"
+  is_bold: true
+
+octal:
+  foreground: "#70CFE3"
+
+flags:
+  foreground: "#BD63FF"
+
+symlink_path:
+  foreground: "#70CFE3"
+
+control_char:
+  foreground: "#FF8A9E"
+
+broken_symlink:
+  foreground: "#FF6B81"
+
+broken_path_overlay:
+  foreground: "#5D4770"
+
+filenames:
+  "README.md":
+    filename:
+      foreground: "#E6C875"
+      is_bold: true
+
+  "CLAUDE.md":
+    filename:
+      foreground: "#D89AFF"
+      is_bold: true
+
+  ".env":
+    filename:
+      foreground: "#FF6B81"
+
+  "Dockerfile":
+    filename:
+      foreground: "#70CFE3"
+      is_bold: true
+
+extensions:
+  "lua":
+    filename:
+      foreground: "#A970FF"
+
+  "luau":
+    filename:
+      foreground: "#BD63FF"
+
+  "rs":
+    filename:
+      foreground: "#FF8A9E"
+
+  "js":
+    filename:
+      foreground: "#E6C875"
+
+  "ts":
+    filename:
+      foreground: "#70CFE3"
+
+  "tsx":
+    filename:
+      foreground: "#70CFE3"
+
+  "jsx":
+    filename:
+      foreground: "#8FAAFF"
+
+  "json":
+    filename:
+      foreground: "#D9D4DE"
+
+  "toml":
+    filename:
+      foreground: "#D89AFF"
+
+  "yml":
+    filename:
+      foreground: "#A970FF"
+
+  "yaml":
+    filename:
+      foreground: "#A970FF"
+
+  "md":
+    filename:
+      foreground: "#D6B5F5"
+
+  "log":
+    filename:
+      foreground: "#69636F"
+
+  "png":
+    filename:
+      foreground: "#E6C875"
+
+  "jpg":
+    filename:
+      foreground: "#E6C875"
+
+  "jpeg":
+    filename:
+      foreground: "#E6C875"
+
+  "zip":
+    filename:
+      foreground: "#FF6B81"
+
+  "jar":
+    filename:
+      foreground: "#FF8A9E"

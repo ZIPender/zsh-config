@@ -1,0 +1,131 @@
+add_newline = true
+scan_timeout = 100
+
+format = """
+[╭─](fg:#5d4770)$directory$git_branch$git_status$python$nodejs$rust$cmd_duration
+[╰─❯](bold fg:#bd63ff) """
+
+right_format = "$status$jobs$time"
+
+
+# ============================================================
+# Directory
+# ============================================================
+
+[directory]
+style = "bold fg:#d6b5f5"
+truncation_length = 4
+truncate_to_repo = false
+read_only = " "
+read_only_style = "fg:#ff6b81"
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Projects" = "󰲋 "
+
+
+# ============================================================
+# Git
+# ============================================================
+
+[git_branch]
+symbol = "\uE0A0 "
+style = "bold fg:#bd63ff"
+format = " [$symbol$branch]($style)"
+
+
+[git_status]
+style = "fg:#d89aff"
+format = " [$all_status$ahead_behind]($style)"
+
+conflicted = "=${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "≡${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+
+# ============================================================
+# Command duration
+# ============================================================
+
+[cmd_duration]
+min_time = 1500
+show_milliseconds = false
+style = "fg:#918799"
+format = " [󱎫 $duration]($style)"
+
+
+# ============================================================
+# Previous command status
+#
+# Only appears when something failed.
+# ============================================================
+
+[status]
+disabled = false
+symbol = "✘ "
+success_symbol = ""
+style = "bold fg:#ff6b81"
+format = "[$symbol$status]($style) "
+
+
+# ============================================================
+# Background jobs
+# ============================================================
+
+[jobs]
+symbol = "󰜎 "
+style = "fg:#a970ff"
+number_threshold = 1
+format = "[$symbol$number]($style) "
+
+
+# ============================================================
+# Clock
+# ============================================================
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:#746d7d"
+format = "[$time]($style)"
+
+
+# ============================================================
+# Python
+# ============================================================
+
+[python]
+symbol = " "
+style = "fg:#a970ff"
+format = " [$symbol$version]($style)"
+
+
+# ============================================================
+# Node.js
+# ============================================================
+
+[nodejs]
+symbol = " "
+style = "fg:#8faaff"
+format = " [$symbol$version]($style)"
+
+
+# ============================================================
+# Rust
+# ============================================================
+
+[rust]
+symbol = " "
+style = "fg:#ff8a9e"
+format = " [$symbol$version]($style)"
