@@ -345,6 +345,8 @@ install_debian_packages() {
         tar
         unzip
         fontconfig
+        # fastfetch needs it to draw the logo images in Konsole.
+        imagemagick
     )
 
     "${SUDO[@]}" apt-get install -y "${packages[@]}"
@@ -714,25 +716,37 @@ fi
 
 KONSOLE_PROFILE="$HOME/.local/share/konsole/Zsh Purple.profile"
 
+KWRITECONFIG=""
+
+if command -v kwriteconfig6 >/dev/null 2>&1; then
+    KWRITECONFIG="kwriteconfig6"
+elif command -v kwriteconfig5 >/dev/null 2>&1; then
+    KWRITECONFIG="kwriteconfig5"
+fi
+
 if [[ -f "$KONSOLE_PROFILE" ]]; then
 
-    if command -v kwriteconfig6 >/dev/null 2>&1; then
+    if [[ -n "$KWRITECONFIG" ]]; then
         info "Setting Konsole profile"
 
-        kwriteconfig6 \
+        "$KWRITECONFIG" \
             --file konsolerc \
             --group "Desktop Entry" \
             --key DefaultProfile \
             "Zsh Purple.profile"
 
-    elif command -v kwriteconfig5 >/dev/null 2>&1; then
-        info "Setting Konsole profile"
-
-        kwriteconfig5 \
+        # No menu bar, no window title bar or frame.
+        "$KWRITECONFIG" \
             --file konsolerc \
-            --group "Desktop Entry" \
-            --key DefaultProfile \
-            "Zsh Purple.profile"
+            --group "<default>" \
+            --key MenuBar \
+            Disabled
+
+        "$KWRITECONFIG" \
+            --file konsolerc \
+            --group KonsoleWindow \
+            --key RemoveWindowTitleBarAndFrame \
+            true
 
     elif command -v konsole >/dev/null 2>&1; then
         note "Konsole profile installed."

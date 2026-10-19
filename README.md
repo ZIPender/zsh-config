@@ -35,3 +35,11 @@ Run:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/ZIPender/zsh-config/main/install.sh)
+```
+
+## Fastfetch logos
+
+Every new terminal runs fastfetch with a random image from `~/.config/fastfetch/logos/`.
+
+- Add or remove `.png` files there to change the rotation (512x512 works best).
+- Images are drawn with the kitty graphics protocol, which needs Konsole and `imagemagick`.

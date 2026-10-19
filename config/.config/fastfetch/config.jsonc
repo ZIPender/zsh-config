@@ -2,24 +2,23 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
   "logo": {
-    "type": "builtin",
-    "source": "arch",
+    "type": "kitty",
+    "source": "~/.config/fastfetch/logos/albedo-current-logo.png",
+    "width": 32,
+    "height": 15,
     "padding": {
-      "right": 4
-    },
-    "color": {
-      "1": "#A970FF",
-      "2": "#70CFE3"
+      "right": 2
     }
   },
 
   "display": {
     "separator": "  ",
     "color": {
-      "title": "#D89AFF"
+      "title": "#D89AFF",
+      "keys": "#A970FF"
     },
     "key": {
-      "width": 12
+      "width": 10
     }
   },
 
@@ -32,58 +31,29 @@
       "key": "OS",
       "keyColor": "#D89AFF"
     },
-    {
-      "type": "host",
-      "key": "Host",
-      "keyColor": "#C47CFF"
-    },
+
     {
       "type": "kernel",
       "key": "Kernel",
-      "keyColor": "#A970FF"
+      "keyColor": "#BD63FF"
     },
+
     {
       "type": "uptime",
       "key": "Uptime",
-      "keyColor": "#9277D8"
+      "keyColor": "#A970FF"
     },
-    {
-      "type": "packages",
-      "key": "Packages",
-      "keyColor": "#7F8FE8"
-    },
-    {
-      "type": "shell",
-      "key": "Shell",
-      "keyColor": "#70A8EE"
-    },
-
-    "break",
 
     {
       "type": "display",
       "key": "Display",
       "keyColor": "#70CFE3"
     },
-    {
-      "type": "de",
-      "key": "Desktop",
-      "keyColor": "#78BCEB"
-    },
+
     {
       "type": "wm",
       "key": "WM",
-      "keyColor": "#879FF4"
-    },
-    {
-      "type": "terminal",
-      "key": "Terminal",
-      "keyColor": "#9A86F9"
-    },
-    {
-      "type": "terminalfont",
-      "key": "Font",
-      "keyColor": "#B275FA"
+      "keyColor": "#8FAAFF"
     },
 
     "break",
@@ -93,38 +63,30 @@
       "key": "CPU",
       "keyColor": "#D89AFF"
     },
+
     {
-      "type": "gpu",
+      "type": "command",
       "key": "GPU",
-      "keyColor": "#C07FFF"
+      "keyColor": "#BD63FF",
+      "text": "nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -n1 | grep . || lspci 2>/dev/null | grep -E 'VGA|3D' | head -n1 | cut -d: -f3- | cut -c2-"
     },
+
     {
       "type": "memory",
       "key": "Memory",
       "keyColor": "#A970FF"
     },
+
     {
       "type": "swap",
       "key": "Swap",
-      "keyColor": "#8E86F6"
+      "keyColor": "#8FAAFF"
     },
-    {
-      "type": "disk",
-      "key": "Disk",
-      "keyColor": "#70A8EE"
-    },
-
-    "break",
 
     {
       "type": "localip",
-      "key": "Local IP",
+      "key": "IP",
       "keyColor": "#70CFE3"
-    },
-    {
-      "type": "locale",
-      "key": "Locale",
-      "keyColor": "#918799"
     }
   ]
 }
