@@ -17,6 +17,12 @@ path=(
 # Android Studio used by Capacitor
 export CAPACITOR_ANDROID_STUDIO_PATH="$HOME/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio.sh"
 
+# Colored man pages through bat (MANROFFOPT=-c keeps groff output col-friendly)
+if command -v bat >/dev/null 2>&1 && command -v col >/dev/null 2>&1; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+  export MANROFFOPT="-c"
+fi
+
 # Rokit
 if [[ -f "$HOME/.rokit/env" ]]; then
   source "$HOME/.rokit/env"
